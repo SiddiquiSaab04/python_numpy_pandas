@@ -39,4 +39,46 @@
 #     data[0]["title"],
 #     data[0]["body"] 
 #     )
+
+
+# filteration
+
+
+# import urllib.request
+# import json
+
+# url = "https://jsonplaceholder.typicode.com/users"
+
+# with urllib.request.urlopen(url,timeout=10) as response:
+#     raw_data = response.read()
+    
+# text_data = raw_data.decode("utf-8")
+# data = json.loads(text_data)
+# for user in data:
+#     print(f"user name is {user["name"]}")
+  
+import urllib.request
+import urllib.error
+import json
+
+filtered_post = []
+url = "https://jsonplaceholder.typicode.com/posts"
+
+try:
+    with urllib.request.urlopen(url,timeout=10) as response:
+     raw_data = response.read()
+    
+    text_data = raw_data.decode("utf-8")
+    data = json.loads(text_data)
+    
+except urllib.error as e:
+    print(f"error is : {e}")
+else:
+   for post in data:
+       if post["userId"] == 1:
+           filtered_post.append(post)
+   print (f"append successfully")
+   for post in filtered_post:
+        print(post["title"])
+
     
