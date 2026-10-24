@@ -1,0 +1,10 @@
+product_id,product_name,category,price
+1,Wireless Mouse,Electronics ,1500
+2,Keyboard,Electronics,3200
+3,USB Cable,Accessories,Rs. 350
+4,Notebook,Stationery,250
+5,Desk Lamp,Home ,Rs. 2100
+6,Headphones,electronics,4800
+7,Water Bottle,Home,Rs. 900
+8,Backpack,Accessories ,"3,500"
+9,Mystery Item,,
