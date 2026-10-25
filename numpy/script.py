@@ -29,3 +29,29 @@ import numpy as np
 # print(arr)
 
 # random.rand() random
+
+# l = [[1,2,4,5],[5,4,258,7],[21,33,5,77]]
+# print(np.shape(l))
+# print(np.size(l))
+# print(np.dtype(l))
+# print(np.sum(l))
+
+# now column wise sum (0)
+# row wise sum (1)
+# row_sum = np.sum(l,axis = 1)
+# print(row_sum)
+
+# INDEXING AND SLICING
+
+# arr = np.arange(10,21)
+# print(arr)
+
+# slicing = arr[1:5]
+# print(slicing)
+
+# indexing
+
+arr = np.arange(1,31).reshape(6,5)
+print(arr)
+indexing = arr[1,4]
+print(indexing)
