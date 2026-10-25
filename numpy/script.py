@@ -27,3 +27,5 @@ import numpy as np
 # linspace
 # arr = np.linspace(0,10,12)
 # print(arr)
+
+# random.rand() random

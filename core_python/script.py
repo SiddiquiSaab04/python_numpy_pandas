@@ -148,3 +148,11 @@
 #     writer.writerows(data)
 # print("CSV file created successfully!")
                
+
+# import csv
+
+# with open("post.csv","r") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         print(row)
+
