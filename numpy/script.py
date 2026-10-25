@@ -51,7 +51,18 @@ import numpy as np
 
 # indexing
 
-arr = np.arange(1,31).reshape(6,5)
-print(arr)
-indexing = arr[1,4]
-print(indexing)
+# arr = np.arange(1,31).reshape(6,5)
+# print(arr)
+# indexing = arr[1,4]
+# print(indexing)
+
+# OPERATIONS
+
+mat1 = np.array([[1,3],[69,8]])
+mat2 = np.array([[200,9],[10,7]])
+# # result = mat1 @ mat2 
+# print(np.dot(mat1,mat2)
+# )
+
+# Transpose (row -> col , col-> row)
+# print(mat1.T)
