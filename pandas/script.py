@@ -1,11 +1,11 @@
 import pandas as pd
-
+import numpy as np
 data = {
-    "User_ID": [101, 102, 103, 104],
+    "User_ID": [101, np.nan, 103, 104],
     "Name": ["Alice", "Bob", "Charlie", "David"],
-    "Score": [85.5, 91.2, 78.0, 95.4],
-    "Passed": [True, True, False, True],
-    "city":["Izmir","Dublin","Warsaw","Baku"]
+    "Score": [85.5, 91.2,np.nan, 95.4],
+    "Passed": [np.nan, True, False, True],
+    "city":["Izmir","Dublin","Warsaw",np.nan]
 }
 
 df = pd.DataFrame(data)
@@ -23,3 +23,20 @@ print(df)
 
 # city_conditon = df[df["city"] == "Izmir"]
 # print(city_conditon)
+
+
+# nulls
+# sum_of_values = df.isna().sum()
+# print(sum_of_values)
+
+# sum_of_values = df.isna()
+# print(sum_of_values)
+
+# sum_of_values = df.isna().sum().any()
+# print(sum_of_values)
+
+# dropna # thresh 
+
+# print(df.dropna(thresh = 5))
+
+# fillna
