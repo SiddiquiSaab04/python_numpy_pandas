@@ -13,5 +13,13 @@ print(df)
 # select_row = df.loc[[0,1,2]]
 # print(select_row)
 
-select_row = df.loc[[2,3]][["Name","Score"]]
-print(select_row)
+# select_row = df.loc[[2,3]][["Name","Score"]]
+# print(select_row)
+
+# conditions
+
+# high_score = df[df["Score"] > 90]
+# print(high_score)
+
+# city_conditon = df[df["city"] == "Izmir"]
+# print(city_conditon)
