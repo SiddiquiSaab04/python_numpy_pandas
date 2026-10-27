@@ -9,7 +9,7 @@ data = {
 }
 
 df = pd.DataFrame(data)
-print(df)
+# print(df)
 # select_row = df.loc[[0,1,2]]
 # print(select_row)
 
@@ -39,4 +39,15 @@ print(df)
 
 # print(df.dropna(thresh = 5))
 
+
 # fillna
+# values = {
+#     "User_ID":102.0,
+#     "Name":"Ben",
+#     "Score":56.5,
+#     "Passed":True,
+#     "city":"Baku"
+# }
+# filled = df.fillna(value=values , inplace=True)
+# print(filled)
+print(df)
