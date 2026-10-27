@@ -51,3 +51,21 @@ df = pd.DataFrame(data)
 # filled = df.fillna(value=values , inplace=True)
 # print(filled)
 print(df)
+
+emp_data = {
+    "Employee_ID": [101, 102, 103, 104, np.nan, 106],
+    "Name": ["Zeeshan", "Ayesha", "Ali", np.nan, "Sana", "Usman"],
+    "Department": ["IT", "HR", "Sales", "Marketing", "IT", np.nan],
+    "Join_Date": ["2022-01-15", "2023-05-11", np.nan, "2021-09-01", "2024-02-10", "2023-11-20"]
+}
+
+salary_data = {
+    "Employee_ID": [101, 102, np.nan, 104, 105, 106],
+    "Base_Salary": [85000.0, np.nan, 45000.0, 60000.0, 95000.0, 72000.0],
+    "Bonus": [5000.0, 3000.0, np.nan, 4000.0, 8000.0, np.nan],
+    "Allowances": [12000.0, 10000.0, 5000.0, np.nan, 15000.0, 9000.0]
+}
+emp_df = pd.DataFrame(emp_data)
+sal_df = pd.DataFrame(salary_data)
+
+print(pd.merge(emp_df,sal_df,on="Employee_ID",how="left"))
