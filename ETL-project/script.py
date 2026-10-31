@@ -25,4 +25,8 @@ df = pd.DataFrame(data)
 df = df.drop(columns=["location"])
 # remove @ cols
 df = df.drop(columns=[c for c in df.columns if c.startswith(":@")])
+# check null
+df = df.isnull().sum()
 print(df)
+
+
