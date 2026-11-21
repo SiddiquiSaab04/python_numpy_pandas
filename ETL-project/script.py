@@ -49,5 +49,3 @@ df["cuisine_description"] = df["cuisine_description"].fillna("Unknown")
 df["inspection_date"] = pd.to_datetime(df["inspection_date"], errors = "coerce" )
 inspection_mask = ((df["inspection_date"].isna()) | (df["inspection_date"].dt.year == 1900))
 df.loc[inspection_mask,"inspection_date"] = pd.NaT
-
-print(inspection_mask.sum())
