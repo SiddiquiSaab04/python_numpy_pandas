@@ -52,10 +52,14 @@ inspection_mask = ((df["inspection_date"].isna()) | (df["inspection_date"].dt.ye
 df.loc[inspection_mask,"inspection_date"] = pd.NaT
 
 df["is_inspected"] = df["inspection_date"].notna()
-print(df["is_inspected"])
+# print(df["is_inspected"])
 # %%
 
 # convert score into number
 df["score"] = pd.to_numeric(df["score"],errors = "coerce")
 
 # print(pd.crosstab(df["is_inspected"], df["score"].isna()))
+
+zip_mask = df["zipcode"].isna().sum()
+print(zip_mask)
+
