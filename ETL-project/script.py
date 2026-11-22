@@ -5,9 +5,10 @@ import urllib.request
 import urllib.parse
 import json
 import socket
+import sys
 
 
-base_url = "https://data.cityofnewyork.us/resource/43nn-pn8j.json"
+base_url = "https://data.cityofnewyork.uss/resource/43nn-pn8j.json"
 page = 1
 limit = 1000
 offset = (page - 1) * limit
@@ -18,8 +19,9 @@ try:
     with urllib.request.urlopen(url,timeout = 10) as response:
         raw_data = response.read()
         data = json.loads(raw_data)
-except(urllib.error.URLError,TimeoutError,socket.timeout) as e:
+except(urllib.error.URLError,TimeoutError,socket.timeout,SystemExit) as e:
     print(f"failed to fetch the API,{e}")
+    sys.exit(1)
     
 df = pd.DataFrame(data)
 # print(df)
