@@ -60,6 +60,11 @@ df["score"] = pd.to_numeric(df["score"],errors = "coerce")
 
 # print(pd.crosstab(df["is_inspected"], df["score"].isna()))
 
-zip_mask = df["zipcode"].isna().sum()
-print(zip_mask)
+# zip_mask = df["zipcode"].isna().sum()
+# print(zip_mask)
 
+# print(pd.crosstab(df["zipcode"].isna(),df["street"].isna()))
+
+boroMask = ((df["boro"] == "0"))
+df.loc[boroMask,"boro"] = np.nan
+print(df["boro"].value_counts())
