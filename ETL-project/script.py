@@ -67,7 +67,7 @@ df["score"] = pd.to_numeric(df["score"],errors = "coerce")
 
 boro_mask = ((df["boro"] == "0"))
 df.loc[boro_mask,"boro"] = np.nan    
-print(df["boro"].value_counts())
+# print(df["boro"].value_counts())
 
 # print((df["latitude"] == "0").sum())
 # print((df["longitude"] == "0").sum())
@@ -79,3 +79,5 @@ df.loc[longitude_mask,"longitude"] = np.nan
 latitude_mask = (df["latitude"] == 0)
 df.loc[latitude_mask,"latitude"] = np.nan 
 
+building_mask = (df["building"] == "N/A")
+df.loc[building_mask,"building"] = np.nan
