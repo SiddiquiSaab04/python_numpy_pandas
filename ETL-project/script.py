@@ -81,3 +81,9 @@ df.loc[latitude_mask,"latitude"] = np.nan
 
 building_mask = (df["building"] == "N/A")
 df.loc[building_mask,"building"] = np.nan
+
+# %% Load
+df.to_csv("clean_inspections.csv", index=False)
+print("Saved", len(df), "rows to clean_inspections.csv")
+
+# %%
