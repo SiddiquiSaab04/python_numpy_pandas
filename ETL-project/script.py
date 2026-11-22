@@ -65,6 +65,17 @@ df["score"] = pd.to_numeric(df["score"],errors = "coerce")
 
 # print(pd.crosstab(df["zipcode"].isna(),df["street"].isna()))
 
-boroMask = ((df["boro"] == "0"))
-df.loc[boroMask,"boro"] = np.nan
+boro_mask = ((df["boro"] == "0"))
+df.loc[boro_mask,"boro"] = np.nan    
 print(df["boro"].value_counts())
+
+# print((df["latitude"] == "0").sum())
+# print((df["longitude"] == "0").sum())
+
+df["latitude"] = pd.to_numeric(df["latitude"],errors = "coerce")
+df["longitude"] = pd.to_numeric(df["longitude"],errors = "coerce")
+longitude_mask = (df["longitude"] == 0)
+df.loc[longitude_mask,"longitude"] = np.nan 
+latitude_mask = (df["latitude"] == 0)
+df.loc[latitude_mask,"latitude"] = np.nan 
+
