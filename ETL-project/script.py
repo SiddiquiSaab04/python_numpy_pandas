@@ -8,7 +8,7 @@ import socket
 import sys
 
 
-base_url = "https://data.cityofnewyork.uss/resource/43nn-pn8j.json"
+base_url = "https://data.cityofnewyork.us/resource/43nn-pn8j.json"
 page = 1
 limit = 1000
 offset = (page - 1) * limit
